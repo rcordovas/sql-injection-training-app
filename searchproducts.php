@@ -112,7 +112,7 @@ while($row = mysqli_fetch_array($result))
 	  
 	  
 	  <div class="footer">
-		<p>Riyaz Walikar | @riyazwalikar | karniv0re@null.co.in</p>
+		<p>me</p>
       </div>
 
 	</div> <!-- /container -->

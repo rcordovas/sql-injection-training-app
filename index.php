@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 ?>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Login Page 1 - SQL Injection Training App</title>
+    <title>Login Page</title>
 
     <link href="./css/htmlstyles.css" rel="stylesheet">
 	</head>
@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
 		
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
-				Login Page 1 - Login using the credentials created using <a href="register.php">register.php</a>
+				Login Page
 				<?php if (!empty($_REQUEST['msg'])){echo "<br />Please Login to continue to searchproducts.php";} ?>
 			</p>
         </div>
