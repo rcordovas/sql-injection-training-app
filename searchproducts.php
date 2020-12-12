@@ -51,6 +51,24 @@ ini_set('display_errors', 1);
     
         
 		<br />
+
+<?php
+if (isset($_POST["searchitem"])) {
+
+$q = "Select * from products where product_name like '".$_POST["searchitem"]."%'";
+
+if (isset($_GET['debug']))
+{
+	if ($_GET['debug']=="true")
+{
+	echo "<pre>".$q."</pre><br /><br />";
+	}
+}
+
+$result = mysqli_query($con,$q);
+$row_cnt = mysqli_num_rows($result);
+echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . isset($_POST["searchitem"]) . "<br/>" ;
+?>
 <div class="searchheader" style="color:white">
 <table>	
     
@@ -72,23 +90,7 @@ ini_set('display_errors', 1);
     </td>
  
 </tr>
-
 <?php
-if (isset($_POST["searchitem"])) {
-
-$q = "Select * from products where product_name like '".$_POST["searchitem"]."%'";
-
-if (isset($_GET['debug']))
-{
-	if ($_GET['debug']=="true")
-{
-	echo "<pre>".$q."</pre><br /><br />";
-	}
-}
-
-$result = mysqli_query($con,$q);
-$row_cnt = mysqli_num_rows($result);
-echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término" . isset($_POST["searchitem"]) . "<br/>" ;
 if (!$result)
 {
 		die("</table></div>".mysqli_error($con));
