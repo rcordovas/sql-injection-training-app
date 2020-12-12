@@ -11,7 +11,7 @@ ini_set('display_errors', 1);
 ?>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Search Products - SQL Injection Training App</title>
+    <title>Search Products</title>
 
     <link href="./css/htmlstyles.css" rel="stylesheet">
 	</head>
@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
 		
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
-				Welcome <?php echo $_SESSION["username"]; ?>!! Search for products here</a>
+				Welcome <?php echo $_SESSION["name"]; ?>!! Search for products here</a>
 			</p>
         </div>
 		
