@@ -67,7 +67,7 @@ if (isset($_GET['debug']))
 
 $result = mysqli_query($con,$q);
 $row_cnt = mysqli_num_rows($result);
-echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . isset($_POST["searchitem"]) . "<br/><br/>" ;
+echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . $_POST["searchitem"] . "<br/><br/>" ;
 ?>
 <div class="searchheader" style="color:white">
 <table>	
