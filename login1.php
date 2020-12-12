@@ -51,6 +51,53 @@ if (!empty($_REQUEST['uid'])) {
 $username = ($_REQUEST['uid']);
 $pass = $_REQUEST['password'];
 
+$q = "SELECT * FROM users where username='".$username."'" ;
+
+if (isset($_GET['debug']))
+{
+	if ($_GET['debug']=="true")
+{
+	echo "<pre>".$q."</pre><br /><br />";
+	}
+}
+
+		if (!mysqli_query($con,$q))
+	{
+		die('Error: ' . mysqli_error($con));
+	}
+	
+	$result = mysqli_query($con,$q);
+
+	// if (!$result) {
+ //    		printf("%s\n", mysqli_error($con));
+ //    		echo "error";
+	// }
+
+if (mysqli_warning_count($con)) { 
+   $e = mysqli_get_warnings($con); 
+   if ($e){
+   do { 
+       echo "Warning: $e->errno: $e->message\n"; 
+   } while ($e->next()); }
+} 
+
+	echo "<br /><br />";
+	$row = mysqli_fetch_array($result);
+
+	
+	if ($row){
+	//header('Location: searchproducts.php');
+	}
+	else{
+		echo "<font style=\"color:#FF0000\">Invalid user!</font\>";
+		die();
+	}
+}
+
+if (!empty($_REQUEST['uid'])) {
+$username = ($_REQUEST['uid']);
+$pass = $_REQUEST['password'];
+
 $q = "SELECT * FROM users where username='".$username."' AND password = '".md5($pass)."'" ;
 
 if (isset($_GET['debug']))
