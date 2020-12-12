@@ -92,7 +92,7 @@ if (!$result)
 {
 		die("</table></div>".mysqli_error($con));
 }
-echo "Se han encontrado " . row_cnt . " coincidencias para su búsqueda " . isset($_POST["searchitem"]) . "<br/>" ;
+echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término" . isset($_POST["searchitem"]) . "<br/>" ;
 while($row = mysqli_fetch_array($result))
   {
   echo "<tr><td style=\"width:200px\">".$row[1]."</td><td style=\"width:200px\">".$row[2]."</td><td style=\"width:450px\">".$row[3]."</td><td style=\"width:110px\">".$row[4]."</td></tr>";
