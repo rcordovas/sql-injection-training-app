@@ -24,7 +24,8 @@ ini_set('display_errors', 1);
 				Welcome <?php echo $_SESSION["name"]; ?>!! Search for products here</a>
 			</p>
         </div>
-		
+
+
 		<div class="response">
 		
 			<p style="color:white">
@@ -36,7 +37,7 @@ ini_set('display_errors', 1);
 					Search for a product:  
 				</td>
 				<td>
-					<input type="text" id="searchitem" name="searchitem">&nbsp;&nbsp;
+					<input type="text" id="searchitem" name="searchitem" value="<?php if(isset($_POST["searchitem"])) { echo $_POST["searchitem"]; }?>">&nbsp;&nbsp;
 				</td>
 				<td>
 					<input type="submit" value="Search!"/> 
@@ -48,8 +49,7 @@ ini_set('display_errors', 1);
 
 		</form>
         </div>
-    
-        
+
 		<br />
 
 <?php
@@ -67,7 +67,7 @@ if (isset($_GET['debug']))
 
 $result = mysqli_query($con,$q);
 $row_cnt = mysqli_num_rows($result);
-echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . isset($_POST["searchitem"]) . "<br/>" ;
+echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . isset($_POST["searchitem"]) . "<br/><br/>" ;
 ?>
 <div class="searchheader" style="color:white">
 <table>	
