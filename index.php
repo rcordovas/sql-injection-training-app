@@ -13,8 +13,26 @@ ini_set('display_errors', 1);
 
     <link href="./css/htmlstyles.css" rel="stylesheet">
 	</head>
+<script>
+function validate(evt) {
+  var theEvent = evt || window.event;
 
-  <body>
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>
+<body>
   <div class="container-narrow">
 		
 		<div class="jumbotron">
@@ -148,25 +166,6 @@ if (mysqli_warning_count($con)) {
 
 //}
 ?>
-<script language="JavaScript">
-function validate(evt) {
-  var theEvent = evt || window.event;
-
-  // Handle paste
-  if (theEvent.type === 'paste') {
-      key = event.clipboardData.getData('text/plain');
-  } else {
-  // Handle key press
-      var key = theEvent.keyCode || theEvent.which;
-      key = String.fromCharCode(key);
-  }
-  var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
-  }
-}
-</script>
 	</div>
 	</div>
 	  
