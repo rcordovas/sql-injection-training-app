@@ -27,28 +27,19 @@ ini_set('display_errors', 1);
 
 		<div class="response">
 		
-			<p style="color:#00828F">
-			<table class="response2">
 			<form method="POST" autocomplete="off">
 			
-			<tr>
-				<td>
-					B&uacute;squeda de un producto:  
-				</td><td></td>
-				<td>
-					<input type="text" id="searchitem" name="searchitem" value="<?php if(isset($_POST["searchitem"])) { echo $_POST["searchitem"]; }?>">&nbsp;&nbsp;
-				</td><td></td>
-				<td>
+			<p style="color:#00828F">
+				B&uacute;squeda de un producto:  
+				<br/>
+				<input type="text" id="searchitem" name="searchitem" value="<?php if(isset($_POST["searchitem"])) { echo $_POST["searchitem"]; }?>">&nbsp;&nbsp;
+				<br/>
 					<input type="submit" value="Buscar!"/> 
-				</td>
-			</tr>
-	</table>
-				
+				<br/>
 			</p>
 
-		</form>
+			</form>
         </div>
-
 		<br />
 
 <?php
