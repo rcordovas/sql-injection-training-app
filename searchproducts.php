@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
 		
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
-				Bienvenido <?php echo $_SESSION["name"]; ?>!! Busque sus productos.<br/>
+				Bienvenido <?php echo $_SESSION["name"]; ?>!<br/>
 			</p>
         </div>
 
@@ -45,7 +45,7 @@ ini_set('display_errors', 1);
 <?php
 if (isset($_POST["searchitem"])) {
 
-$q = "Select * from products where product_name like '".$_POST["searchitem"]."%'";
+$q = "Select * from products where product_name like '%".$_POST["searchitem"]."%'";
 
 if (isset($_GET['debug']))
 {
@@ -59,53 +59,49 @@ $result = mysqli_query($con,$q);
 $row_cnt = mysqli_num_rows($result);
 echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . $_POST["searchitem"] . "<br/><br/>" ;
 ?>
-<div class="searchheader" style="color:white">
-<table>	
-    
-	<tr>
-    <td style="width:200px " >
-        <b>Product Name</b>
-    </td>
-    
-    <td style="width:200px " >
-        <b>Product Type</b>
-    </td>
-    
-    <td style="width:450px " >
-        <b>Description</b>
-    </td>
-    
-    <td style="width:110px " >
-        <b>Price (in USD)</b>
-    </td>
- 
-</tr>
+
+<table class="styled-table">
+ 	<thead>
+		<tr>
+		    <td style="width:200px " >
+		        <b>Product Name</b>
+		    </td>
+		    
+		    <td style="width:200px " >
+		        <b>Product Type</b>
+		    </td>
+		    
+		    <td style="width:450px " >
+		        <b>Description</b>
+		    </td>
+		    
+		    <td style="width:110px " >
+		        <b>Price (in USD)</b>
+		    </td>
+	    </tr>
+  	</thead>
+  	<tbody>
 <?php
-if (!$result)
-{
-		die("</table></div>".mysqli_error($con));
-}
-while($row = mysqli_fetch_array($result))
-  {
-  echo "<tr><td style=\"width:200px\">".$row[1]."</td><td style=\"width:200px\">".$row[2]."</td><td style=\"width:450px\">".$row[3]."</td><td style=\"width:110px\">".$row[4]."</td></tr>";
-  }
+	if (!$result)
+	{
+		die("</tbody></table></div>".mysqli_error($con));
+	}
+	while($row = mysqli_fetch_array($result))
+	  {
+	  echo "<tr><td style=\"width:200px\">".$row[1]."</td><td style=\"width:200px\">".$row[2]."</td><td style=\"width:450px\">".$row[3]."</td><td style=\"width:110px\">".$row[4]."</td></tr>";
+	  }
 
-}
-
-
+	}
 ?>
-</table>
-	</div>
-
-	  
-	  
-	  <div class="footer">
+	<tbody>
+</table> 
+  	<div class="footer">
 		<p><h4><a href="index.php">Home</a><h4></p>
-      </div>
+	</div>
 	  
 	  
 	  <div class="footer">
-		<p>me</p>
+		<p>Desarrollado by 4ng3l.</p>
       </div>
 
 	</div> <!-- /container -->
