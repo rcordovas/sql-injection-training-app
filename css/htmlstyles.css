@@ -88,7 +88,6 @@ body {
   line-height: 2.1428571435;
   color: inherit;
   background-color: #00828F;
-  border-radius: 15px;
 }
 
 
@@ -103,7 +102,6 @@ body {
   border-color: #00828F;
   border-style: solid;
   border-width: 3px;
-  border-radius: 15px;
 }
 
 .searchheader {
@@ -130,12 +128,12 @@ body {
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding: 10px 10px;
-    border-radius: 2px;
+    border-radius: 12px;
   }
   
   .response {
     padding: 10px 10px;
-    border-radius: 2px;
+    border-radius: 12px;
   }
   
   .searchheader {
