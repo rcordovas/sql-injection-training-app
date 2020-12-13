@@ -28,7 +28,7 @@ ini_set('display_errors', 1);
 		<form method="POST" autocomplete="off">
 			<p style="color:#00828F">
 				<label>Usuario:</label>
-				<input type="text" placeholder="Ingrese su usuario" id="uid" name="uid" value="<?php if(isset($_REQUEST['uid'])){echo trim($_REQUEST['uid']);} ?>"required><br /></br />
+				<input type="text" placeholder="Ingrese su usuario" id="uid" name="uid" required><br /></br />
 				<label>Contrase&ntilde;a:</label>
 				<input type="password" placeholder="Ingrese su contrase&ntilde;a" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)' required>
 			</p>
