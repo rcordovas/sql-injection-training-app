@@ -57,26 +57,25 @@ if (isset($_GET['debug']))
 
 $result = mysqli_query($con,$q);
 $row_cnt = mysqli_num_rows($result);
-echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . $_POST["searchitem"] . "<br/><br/>" ;
+echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando el término " . $_POST["searchitem"] . "<br/>" ;
 ?>
-
 <table class="styled-table">
  	<thead>
 		<tr>
 		    <td style="width:200px " >
-		        <b>Product Name</b>
+		        <b>Nombre de producto</b>
 		    </td>
 		    
 		    <td style="width:200px " >
-		        <b>Product Type</b>
+		        <b>Tipo de producto</b>
 		    </td>
 		    
 		    <td style="width:450px " >
-		        <b>Description</b>
+		        <b>Descripcion</b>
 		    </td>
 		    
 		    <td style="width:110px " >
-		        <b>Price (in USD)</b>
+		        <b>Precio (en USD)</b>
 		    </td>
 	    </tr>
   	</thead>
