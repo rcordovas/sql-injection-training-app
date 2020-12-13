@@ -11,7 +11,7 @@ ini_set('display_errors', 1);
 ?>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Search Products</title>
+    <title>B&uacute;squeda de productos</title>
 
     <link href="./css/htmlstyles.css" rel="stylesheet">
 	</head>
@@ -21,26 +21,25 @@ ini_set('display_errors', 1);
 		
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
-				Welcome <?php echo $_SESSION["name"]; ?>!! Search for products here</a>
+				Bienvenido <?php echo $_SESSION["name"]; ?>!! Busque sus productos.<br/>
 			</p>
         </div>
 
-
 		<div class="response">
 		
-			<p style="color:white">
-			<table class="response">
+			<p style="color:#00828F">
+			<table class="response2">
 			<form method="POST" autocomplete="off">
 			
 			<tr>
 				<td>
-					Search for a product:  
-				</td>
+					B&uacute;squeda de un producto:  
+				</td><td></td>
 				<td>
 					<input type="text" id="searchitem" name="searchitem" value="<?php if(isset($_POST["searchitem"])) { echo $_POST["searchitem"]; }?>">&nbsp;&nbsp;
-				</td>
+				</td><td></td>
 				<td>
-					<input type="submit" value="Search!"/> 
+					<input type="submit" value="Buscar!"/> 
 				</td>
 			</tr>
 	</table>
