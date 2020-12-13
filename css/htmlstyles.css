@@ -22,7 +22,7 @@ input[type=text], input[type=password] {
 input[type=submit], input[type=reset] {  
   background-color: #00828F;   
   width: 100px;  
-  color: orange;   
+  color: #FFF;   
   padding: 15px;   
   margin: 10px 0px;   
   border: none;   
