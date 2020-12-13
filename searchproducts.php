@@ -95,7 +95,7 @@ echo "Se han encontrado " . $row_cnt . " coincidencias para su búsqueda usando 
 	<tbody>
 </table> 
   	<div class="footer">
-		<p><h4><a href="index.php">Home</a><h4></p>|<p><h4><a href="logout.php">Cerrar sesión</a><h4></p>
+		<p><h4><a href="index.php">Home</a> | <a href="logout.php">Cerrar sesión</a><h4></p>
 	</div>
 	  
 	  
