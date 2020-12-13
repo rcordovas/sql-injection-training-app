@@ -18,7 +18,7 @@ ini_set('display_errors', 1);
   <div class="container-narrow">
 		
 		<div class="jumbotron">
-			<p class="lead" style="color:white">
+			<p class="lead" style="color:#00828F">
 				Login Page
 				<?php if (!empty($_REQUEST['msg'])){echo "<br />Please Login to continue to searchproducts.php";} ?>
 			</p>
@@ -177,7 +177,7 @@ function validate(evt) {
       </div>
 
 	  <div class="footer">
-		<p>home</p>
+		<p>Desarrollado by 4ng3l.</p>
       </div>
 	</div> <!-- /container -->
   
