@@ -148,7 +148,7 @@ if (mysqli_warning_count($con)) {
 
 //}
 ?>
-<script>
+<script language="JavaScript">
 function validate(evt) {
   var theEvent = evt || window.event;
 
