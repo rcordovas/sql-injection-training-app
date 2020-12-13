@@ -32,17 +32,13 @@ ini_set('display_errors', 1);
 				<label>Contrase&ntilde;a:</label>
 				<input type="password" placeholder="Ingrese su contrase&ntilde;a" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)' required>
 			</p>
-			<br />
 			<p>
 			<input type="submit" value="Submit"/> 
 			<input type="reset" value="Reset"/>
 			</p>
 		</form>
-        </div>
-    
-        
+        </div>        
 		<br />
-		
       <div class="row marketing">
         <div class="col-lg-6">
 <!---

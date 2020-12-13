@@ -19,7 +19,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;   
 }  
 
-button {   
+input[type=submit], input[type=reset] {  
   background-color: #00828F;   
   width: 100px;  
   color: orange;   
