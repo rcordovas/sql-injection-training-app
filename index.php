@@ -18,7 +18,7 @@ ini_set('display_errors', 1);
   <div class="container-narrow">
 		
 		<div class="jumbotron">
-			<p class="lead" style="color:#00828F">
+			<p class="lead" style="color:white">
 				Login Page
 				<?php if (!empty($_REQUEST['msg'])){echo "<br />Please Login to continue to searchproducts.php";} ?>
 			</p>
@@ -26,7 +26,7 @@ ini_set('display_errors', 1);
 		
 		<div class="response">
 		<form method="POST" autocomplete="off">
-			<p style="color:white">
+			<p style="color:#00828F">
 				Username:  <input type="text" id="uid" name="uid"><br /></br />
 				Password: <input type="password" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)'>
 			</p>
