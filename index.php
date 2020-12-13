@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 ?>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Login Page</title>
+    <title>Autenticaci&oacute;n</title>
 
     <link href="./css/htmlstyles.css" rel="stylesheet">
 	</head>
@@ -20,15 +20,15 @@ ini_set('display_errors', 1);
 		<div class="jumbotron">
 			<p class="lead" style="color:white">
 				Login Page
-				<?php if (!empty($_REQUEST['msg'])){echo "<br />Please Login to continue to searchproducts.php";} ?>
+				<?php if (!empty($_REQUEST['msg'])){echo "<br />Por favor autenticarse para ingresar al m&oacute;dulo de b&uacute;squeda searchproducts.php";} ?>
 			</p>
         </div>
 		
 		<div class="response">
 		<form method="POST" autocomplete="off">
 			<p style="color:#00828F">
-				Username:  <input type="text" id="uid" name="uid"><br /></br />
-				Password: <input type="password" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)'>
+				Usuario:  <input type="text" id="uid" name="uid"><br /></br />
+				Contrase&ntilde;a: <input type="password" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)'>
 			</p>
 			<br />
 			<p>
