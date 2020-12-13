@@ -125,7 +125,7 @@ input[type=submit]:hover, input[type=reset]:hover {
   /* background-color: #28CCF5; */
   border-color: #00828F;
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
 }
 
 .searchheader {
@@ -152,17 +152,17 @@ input[type=submit]:hover, input[type=reset]:hover {
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding: 10px 10px;
-    border-radius: 12px;
+    border-radius: 10px;
   }
   
   .response {
     padding: 10px 10px;
-    border-radius: 12px;
+    border-radius: 5px;
   }
   
   .searchheader {
     padding: 10px 10px;
-    border-radius: 2px;
+    border-radius: 5px;
   }
   .jumbotron h1 {
     font-size: 63px;
