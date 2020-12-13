@@ -27,8 +27,10 @@ ini_set('display_errors', 1);
 		<div class="response">
 		<form method="POST" autocomplete="off">
 			<p style="color:#00828F">
-				Usuario:  <input type="text" id="uid" name="uid"><br /></br />
-				Contrase&ntilde;a: <input type="password" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)'>
+				<label>Usuario:</label>
+				<input type="text" placeholder="Ingrese su usuario" id="uid" name="uid" required><br /></br />
+				<label>Contrase&ntilde;a:</label>
+				<input type="password" placeholder="Ingrese su contrase&ntilde;a" id="password" name="password" maxlength="5" minlength="5" onkeypress='validate(event)' required>
 			</p>
 			<br />
 			<p>
