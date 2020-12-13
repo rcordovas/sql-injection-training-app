@@ -99,7 +99,9 @@ body {
   line-height: 1;
   color: inherit;
   /* background-color: #28CCF5; */
-  border-color: #28CCF5;
+  border-color: #00828F;
+  border-style: solid;
+  border-width: 3px;
 }
 
 .searchheader {
